@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 const port = 8100;
@@ -20,7 +20,7 @@ module.exports = {
     autoprefixer,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    // new ExtractTextPlugin('app.css'),
+    new ExtractTextPlugin('app.css'),
   ],
   output: {
     path: path.join(__dirname, '/dist'),

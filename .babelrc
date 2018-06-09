@@ -1,7 +1,19 @@
 {
   "presets": [
     "env",
-    "react",
+    "react", 
+    "es2015", 
+    "es2017", 
+    "stage-0", 
+    "stage-1",
     "stage-2"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "jsx-control-statements",
+    "transform-object-assign",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-runtime"
   ]
 }

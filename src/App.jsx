@@ -1,10 +1,10 @@
 import React from 'react';
 
-// require('./styles/app.scss');
+require('./styles/app.scss');
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="container">
       Welcome
     </div>
   );
