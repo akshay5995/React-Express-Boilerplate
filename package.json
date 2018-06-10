@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.6.2",
+    "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
     "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
@@ -64,6 +65,7 @@
     "express-session": "^1.15.6",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "livereload-js": "^2.3.0",
+    "material-ui": "^0.20.1",
     "path": "^0.12.7",
     "pm2": "^2.10.4",
     "postcss": "^6.0.22",
@@ -74,6 +76,14 @@
     "pug": "^2.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "react-tap-event-plugin": "^3.0.3",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "request-id": "^0.11.1",
     "scss-tokenizer": "^0.3.0"
   }
