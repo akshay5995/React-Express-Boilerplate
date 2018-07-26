@@ -14,7 +14,10 @@ class Welcome extends Component {
   render() {
     return (
       <div className="container">
-        {this.props.message ? this.props.message : this.props.error}
+        <div className="message">
+          {this.props.message ? this.props.message : this.props.error}
+        </div>
+        <span>This is a Minimal React Express Boilerplate</span>
       </div>
     );
   }

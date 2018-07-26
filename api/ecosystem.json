@@ -1,7 +1,7 @@
 {
     "apps": [
       {
-        "name": "JournalHub",
+        "name": "Express",
         "script": "api/server.js",
         "watch": true,
         "instances": 1,
@@ -18,9 +18,9 @@
         "env": {
           "DEBUG": "fetch:request"
         },
-        "log_file": "./logs/JournalHub.log",
-        "out_file": "./logs/JournalHub.log",
-        "err_file": "./logs/JournalHub.log"
+        "log_file": "./logs/Express.log",
+        "out_file": "./logs/Express.log",
+        "err_file": "./logs/Express.log"
       }
     ]
 }

@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 // const routes = require('./routes');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const session = require('express-session');
+// const session = require('express-session');
 
 const PORT = process.env.PORT || 3100;
 const requestId = require('request-id/express');
@@ -25,7 +25,8 @@ app.use('/assets', express.static('assets', { redirect: true }));
 app.use(compression());
 // routes.bind(app);
 
-var index = require('./routes/index');
+const index = require('./routes/index');
+
 app.use('/api', index);
 
 app.get('*', (req, res) => {
