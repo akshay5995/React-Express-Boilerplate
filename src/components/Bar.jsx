@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Bar extends PureComponent {
   constructor() {
@@ -10,18 +10,8 @@ class Bar extends PureComponent {
   render() {
     return (
       <div>
-        <Link
-          exact
-          to="/"
-        >
-          Window One
-        </Link>
-        <Link
-          exact
-          to="/two"
-        >
-          Window Two
-        </Link>
+        <NavLink exact to="/">Window One</NavLink>
+        <NavLink exact to="/two">Window Two</NavLink>
       </div>
     );
   }
