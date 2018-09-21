@@ -1,11 +1,5 @@
-const express = require('express');
+const api = require('./api');
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.json({
-    message: 'Welcome User',
-  });
-});
-
-module.exports = router;
+exports.bind = (app) => {
+  app.use('/api', api);
+};

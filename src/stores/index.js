@@ -8,6 +8,14 @@ import reducers from '../reducers';
 
 const getMiddleware = (history) => {
   const reduxRouterMiddleware = routerMiddleware(history);
+  const { NODE_ENV } = process.env;
+
+  if (NODE_ENV === 'production') {
+    return applyMiddleware(
+      thunkMiddleware,
+      reduxRouterMiddleware,
+    )(createStore);
+  }
   return applyMiddleware(
     thunkMiddleware,
     loggerMiddleware,

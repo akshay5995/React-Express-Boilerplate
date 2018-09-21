@@ -7,11 +7,14 @@ html
     meta(name='format-detection' content='telephone=no')
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-    title="Welcome"
-    link(rel='icon', href='/assets/favicon.ico', type='image/icon')
+    title="Communication Portal"
+    link(rel='icon', href='/assets/favicon.png', type='image/icon')
   body
     #app
     script="__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__"
+    script(type="text/javascript", src="/assets/main.js")
     script(type="text/javascript", src="/assets/app.js")
+    script(type="text/javascript", src="/assets/vendors.js")
+    script(type="text/javascript", src="/assets/styles.js")
     link(rel="stylesheet", type="text/css", href="/assets/app.css")
     link(rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css?family=Lato:400,700")

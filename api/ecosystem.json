@@ -1,7 +1,7 @@
 {
     "apps": [
       {
-        "name": "Express",
+        "name": "React Express Boilerplate",
         "script": "api/server.js",
         "watch": true,
         "instances": 1,

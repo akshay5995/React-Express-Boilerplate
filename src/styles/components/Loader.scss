@@ -1,0 +1,43 @@
+.LoaderHolder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .Loader {
+        height: 50px;
+        width: 50px;
+        border: 5px solid white;
+        border-top: 5px solid #00b4d2;
+        border-radius: 50%;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+    }
+    button {
+        background: #00b4d2;
+        border: 2px solid white;
+        font-size: 14px;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
+        outline: none;
+        cursor: pointer;
+        transition-duration: .5s;
+    }
+    button:hover {
+        background: white;
+        color: #00b4d2;
+    }
+    
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}

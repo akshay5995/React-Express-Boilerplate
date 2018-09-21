@@ -5,13 +5,12 @@ const compression = require('compression');
 
 const app = express();
 const flash = require('connect-flash');
-// const routes = require('./routes');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-// const session = require('express-session');
 
 const PORT = process.env.PORT || 3100;
 const requestId = require('request-id/express');
+const routes = require('./routes');
 
 app.use(requestId({ paramName: 'requestId' }));
 app.use(flash());
@@ -23,11 +22,7 @@ app.set('view engine', 'pug');
 app.use('/assets', express.static('assets', { redirect: true }));
 
 app.use(compression());
-// routes.bind(app);
-
-const index = require('./routes/index');
-
-app.use('/api', index);
+routes.bind(app);
 
 app.get('*', (req, res) => {
   res.render('index');
