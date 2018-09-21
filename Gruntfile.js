@@ -2,7 +2,7 @@ const webpackConfig = require('./webpack.config.js');
 
 module.exports = (grunt) => {
   const pkg = {
-    name: 'vapps',
+    name: 'boilerplate',
     dest: './dist/',
     static: './dist/assets/',
     api: './api/',
