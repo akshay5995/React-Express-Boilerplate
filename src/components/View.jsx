@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import Loader from './Loader';
 import Bar from './Bar';
@@ -26,20 +26,21 @@ class View extends PureComponent {
           <h1>React Express Boilerplate</h1>
           <Bar />
           <div className="Content">
-            <Route
-              component={MyLoadable({
-                loader: () => import(/* webpackChunkName: "inbox" */ './WindowOne'),
-              })}
-              exact
-              path="/"
-            />
-            <Route
-              component={MyLoadable({
-                loader: () => import(/* webpackChunkName: "inbox" */ './WindowTwo'),
-              })}
-              exact
-              path="/two"
-            />
+            <Switch>
+              <Route
+                component={MyLoadable({
+                  loader: () => import(/* webpackChunkName: "WindowOne" */ './WindowOne'),
+                })}
+                exact
+                path="/"
+              />
+              <Route
+                component={MyLoadable({
+                  loader: () => import(/* webpackChunkName: "WindowTwo" */ './WindowTwo'),
+                })}
+                path="/two"
+              />
+            </Switch>
           </div>
         </div>
       </BrowserRouter>
