@@ -24,4 +24,4 @@ This is done for production
 ```
 cd /dist
 node server.js
-```
+```# geolock
